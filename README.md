@@ -1,6 +1,6 @@
 # OWClock
 
-![image]([https://user-images.githubusercontent.com/3955124/143557890-e64ad41d-9e19-4c10-9471-c2beaa1ed49b.png](https://github.com/porbf/OWClock-Chinese/blob/7df3d87bc3656659c718ba51aa0dc4815d5a8629/image.png))
+![image](https://github.com/porbf/OWClock-Chinese/blob/7df3d87bc3656659c718ba51aa0dc4815d5a8629/image.png)
 
 此模组为 星际拓荒 添加了一个时钟叠加效果，可设置为向太阳爆炸方向递增或递减。
 还有一个额外的事件日志系统：在 `events.json` 中定义的即将发生的事件会显示在时钟上方，临近时会变为红色。  
