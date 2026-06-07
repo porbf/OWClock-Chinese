@@ -1,59 +1,65 @@
 {
-	"$schema": "https://raw.githubusercontent.com/ow-mods/owml/master/schemas/config_schema.json",
-	"enabled": true,
-	"settings": {
-		"Count Up": true,
-		"Count In Milliseconds": false,
-		"Events to Display": 5,
-		"Only Display When Suit Equipped": false,
-		"HudScale": {
-			"title": "事件列表宽度",
-			"type": "slider",
-			"value": 20,
-			"min": 10,
-			"max": 80
-		},
-		"Sun": {
-			"title": "展示太阳活动",
-			"type": "toggle",
-			"value": true,
-			"yes": "Yes",
-			"no": "No"
-		},
-		"TimeLoop": {
-			"title": "展示时间循环事件",
-			"type": "toggle",
-			"value": true,
-			"yes": "Yes",
-			"no": "No"
-		},
-		"WarpPlatforms": {
-			"title": "展示传送平台事件",
-			"type": "toggle",
-			"value": true,
-			"yes": "Yes",
-			"no": "No"
-		},
-		"Chert": {
-			"title": "展示 Chert 的情绪",
-			"type": "toggle",
-			"value": true,
-			"yes": "Yes",
-			"no": "No"
-		},
-		"Misc": {
-			"title": "展示其他事件",
-			"type": "toggle",
-			"value": true,
-			"yes": "Yes",
-			"no": "No"
-		},
-		"EotE": {
-			"title": "展示眼之回响(DLC)事件",
-			"type": "toggle",
-			"value": true,
-			"yes": "Yes",
-			"no": "No"
-		}
-	}
+    "$schema": "https://raw.githubusercontent.com/ow-mods/owml/master/schemas/config_schema.json",
+    "enabled": true,
+    "settings": {
+        "Count Up": {
+            "title": "时间正计时",
+            "type": "toggle",
+            "value": true
+        },
+        "Count In Milliseconds": {
+            "title": "显示毫秒",
+            "type": "toggle",
+            "value": false
+        },
+        "Events to Display": {
+            "title": "显示的事件数量",
+            "type": "number",
+            "value": 5,
+            "min": 1,
+            "max": 20
+        },
+        "Only Display When Suit Equipped": {
+            "title": "仅在穿宇航服时显示",
+            "type": "toggle",
+            "value": false
+        },
+        "HudScale": {
+            "title": "事件列表宽度",
+            "type": "slider",
+            "value": 20,
+            "min": 10,
+            "max": 80
+        },
+        "Sun": {
+            "title": "展示太阳活动",
+            "type": "toggle",
+            "value": true
+        },
+        "TimeLoop": {
+            "title": "展示时间循环事件",
+            "type": "toggle",
+            "value": true
+        },
+        "WarpPlatforms": {
+            "title": "展示传送平台事件",
+            "type": "toggle",
+            "value": true
+        },
+        "Chert": {
+            "title": "展示 切特(Chert) 的情绪",
+            "type": "toggle",
+            "value": true
+        },
+        "Misc": {
+            "title": "展示其他事件",
+            "type": "toggle",
+            "value": true
+        },
+        "EotE": {
+            "title": "展示眼之回响(DLC)事件",
+            "type": "toggle",
+            "value": true
+        }
+    }
 }
