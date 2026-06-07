@@ -146,10 +146,10 @@ namespace Clock
         /// <param name="config">The new settings passed from OWML</param>
         public override void Configure(IModConfig config)
         {
-            CountUp = config.GetSettingsValue<bool>("Count Up");
-            Milliseconds = config.GetSettingsValue<bool>("Count In Milliseconds");
-            EventCount = config.GetSettingsValue<int>("Events to Display");
-            HudScale = config.GetSettingsValue<float>("HudScale");
+            CountUp = config.GetSettingsValue<bool>("向上计数");
+            Milliseconds = config.GetSettingsValue<bool>("以毫秒计数");
+            EventCount = config.GetSettingsValue<int>("事件数目");
+            HudScale = config.GetSettingsValue<float>("显示宽度");
             EnabledTypes.Clear();
             for (int i = 0; i < Enum.GetNames(typeof(TimeEvent.Type)).Length; i++)
             {
@@ -162,7 +162,7 @@ namespace Clock
 
             // When the HudScale changes, we need to scale the HUD
             RecalculatePosition();
-            _displayOnlyWhenSuitOn = config.GetSettingsValue<bool>("Only Display When Suit Equipped");
+            _displayOnlyWhenSuitOn = config.GetSettingsValue<bool>("只在穿戴宇航服时显示");
         }
 
         #endregion
@@ -174,7 +174,7 @@ namespace Clock
         private void OnWakeup()
         {
             // Start the list over from the save file when you wake up. This allows us to remove events as they happen.
-            ModHelper.Console.WriteLine("Loading the event list for the clock.", type: MessageType.Debug);
+            ModHelper.Console.WriteLine("正在加载Clock事件列表.", type: MessageType.Debug);
             _eventList = Save.eventList.ToList();
         }
 
@@ -184,11 +184,11 @@ namespace Clock
 #pragma warning disable 0618 // New menu system doesn't support text input in pause menu
         private void AddMenuItem()
         {
-            var addEventMenu = ModHelper.Menus.PauseMenu.Copy("ADD EVENT");
-            var addEventInputButton = ModHelper.Menus.PauseMenu.ResumeButton.Duplicate("ADD EVENT");
+            var addEventMenu = ModHelper.Menus.PauseMenu.Copy("增加事件");
+            var addEventInputButton = ModHelper.Menus.PauseMenu.ResumeButton.Duplicate("增加事件");
             addEventInputButton.OnClick += EventPopup;
 
-            var debugEventMenu = ModHelper.Menus.PauseMenu.Copy("DEBUG TIME");
+            var debugEventMenu = ModHelper.Menus.PauseMenu.Copy("DEBUG 时间");
             var debugEventInputButton = ModHelper.Menus.PauseMenu.ResumeButton.Duplicate("DEBUG TIME");
             debugEventInputButton.OnClick += LogTime;
         }
@@ -200,7 +200,7 @@ namespace Clock
         private void LogTime()
         {
             var currentTime = TimeLoop.GetSecondsElapsed();
-            ModHelper.Console.WriteLine($"Time is {currentTime}", type: MessageType.Info);
+            ModHelper.Console.WriteLine($"当前时间: {currentTime}", type: MessageType.Info);
         }
 
         /// <summary>
