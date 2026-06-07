@@ -7,49 +7,49 @@
 		"Events to Display": 5,
 		"Only Display When Suit Equipped": false,
 		"HudScale": {
-			"title": "Event List Width",
+			"title": "事件列表宽度",
 			"type": "slider",
 			"value": 20,
 			"min": 10,
 			"max": 80
 		},
 		"Sun": {
-			"title": "Show Sun Events",
+			"title": "展示太阳活动",
 			"type": "toggle",
 			"value": true,
 			"yes": "Yes",
 			"no": "No"
 		},
 		"TimeLoop": {
-			"title": "Show Timeloop Events",
+			"title": "展示时间循环事件",
 			"type": "toggle",
 			"value": true,
 			"yes": "Yes",
 			"no": "No"
 		},
 		"WarpPlatforms": {
-			"title": "Show Warp Platform Events",
+			"title": "展示传送平台事件",
 			"type": "toggle",
 			"value": true,
 			"yes": "Yes",
 			"no": "No"
 		},
 		"Chert": {
-			"title": "Show Chert's Mood",
+			"title": "展示 Chert 的情绪",
 			"type": "toggle",
 			"value": true,
 			"yes": "Yes",
 			"no": "No"
 		},
 		"Misc": {
-			"title": "Show Other Events",
+			"title": "展示其他事件",
 			"type": "toggle",
 			"value": true,
 			"yes": "Yes",
 			"no": "No"
 		},
 		"EotE": {
-			"title": "Show Echoes of the Eye Events",
+			"title": "展示眼之回响(DLC)事件",
 			"type": "toggle",
 			"value": true,
 			"yes": "Yes",
